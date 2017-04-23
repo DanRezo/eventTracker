@@ -22,11 +22,9 @@ DROP TABLE IF EXISTS `Shoe` ;
 
 CREATE TABLE IF NOT EXISTS `Shoe` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `currentMileage` INT NULL,
   `totalMileage` INT NULL,
   `brand` VARCHAR(45) NULL,
   `name` VARCHAR(45) NULL,
-  `image` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -40,14 +38,14 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `shoeMinder`;
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (1, 0, 23, 'Nike', 'Vomero 13', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (2, 0, 56, 'Nike', 'Pegasus 34', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (3, 0, 77, 'New Balance', '1080 V6', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (4, 0, 235, 'Altra', 'Torin 3.5', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (5, 0, 300, 'Newton', 'Kismet 3', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (6, 0, 345, 'New Balance', '860V6', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (7, 0, 12, 'Brooks', 'Ghost 10', NULL);
-INSERT INTO `Shoe` (`id`, `currentMileage`, `totalMileage`, `brand`, `name`, `image`) VALUES (8, 0, 3, 'Asics', 'Nimbus 11', NULL);
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (1, 23, 'Nike', 'Vomero 13');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (2, 56, 'Nike', 'Pegasus 34');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (3, 77, 'New Balance', '1080 V6');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (4, 235, 'Altra', 'Torin 3.5');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (5, 300, 'Newton', 'Kismet 3');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (6, 345, 'New Balance', '860V6');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (7, 12, 'Brooks', 'Ghost 10');
+INSERT INTO `Shoe` (`id`, `totalMileage`, `brand`, `name`) VALUES (8, 3, 'Asics', 'Nimbus 11');
 
 COMMIT;
 

@@ -11,21 +11,14 @@ public class Shoe {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private int currentMileage;
 	private int totalMileage;
 	private String brand;
 	private String name;
-	private String image;
 	
 	
 	/// gets and sets
 	
-	public int getCurrentMilage() {
-		return currentMileage;
-	}
-	public void setCurrentMilage(int currentMilage) {
-		this.currentMileage = currentMilage;
-	}
+
 	public int getTotalMileage() {
 		return totalMileage;
 	}
@@ -44,12 +37,7 @@ public class Shoe {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
+
 	public int getId() {
 		return id;
 	}
@@ -58,8 +46,8 @@ public class Shoe {
 	
 	@Override
 	public String toString() {
-		return "Shoe [id=" + id + ", currentMilage=" + currentMileage + ", totalMilage=" + totalMileage + ", brand="
-				+ brand + ", name=" + name + ", image=" + image + "]";
+		return "Shoe [id=" + id + ", currentMilage=" + ", totalMilage=" + totalMileage + ", brand="
+				+ brand + ", name=" + name + ", image= ]";
 	}
  
 	

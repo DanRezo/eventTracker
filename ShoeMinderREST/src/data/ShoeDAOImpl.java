@@ -38,12 +38,8 @@ public class ShoeDAOImpl implements ShoeDAO {
 	@Override
 	public Shoe update(int id, Shoe s) {
 		Shoe shoe = em.find(Shoe.class, id);
-
-		shoe.setName(s.getName());
-		shoe.setBrand(s.getBrand());
-		shoe.setCurrentMilage(s.getCurrentMilage());
 		shoe.setTotalMilage(s.getTotalMileage());
-		shoe.setImage(s.getImage());
+		
 
 		return shoe;
 	}

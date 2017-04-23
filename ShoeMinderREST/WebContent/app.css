@@ -1,9 +1,9 @@
-body{
+body {
 	margin: 0;
-	padding:0;
+	padding: 0;
 }
 
-div{
+div {
 	overflow: hidden;
 }
 
@@ -32,6 +32,7 @@ nav ul li {
 	cursor: hand;
 	tansition: all .2s ease-in-out;
 }
+
 nav ul li:hover {
 	transform: scale(1.1);
 }
@@ -42,8 +43,16 @@ nav ul li:hover {
 	border-radius: 10px;
 }
 
-
-
 tr:nth-child(even) {
 	background-color: #eee;
+}
+
+td {
+	text-align: center;
+	vertical-align: middle;
+	font-family: 'Roboto Mono', monospace;
+}
+
+button:hover {
+	background-color: #19e54f;
 }
