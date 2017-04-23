@@ -17,7 +17,6 @@ var start = function() {
 function loadTable(data) {
 
 	var $table = $('<table>');
-	var $h1 = $('<h1>');
 	var $tr1 = $('<tr>');
 	var $tr3 = $('<tr>');
 	var $th1 = $('<th>');
@@ -25,13 +24,12 @@ function loadTable(data) {
 	var $th3 = $('<th>');
 	var $th4 = $('<th>');
 	
-	$h1.text('shoeMinder');
 	$th1.text('');
 	$th2.text('Brand');
 	$th3.text('Name');
 	$th4.text('Total Distance');
 	$tr1.append($th1,$th2,$th3,$th4);
-	$table.append($h1,$tr1);
+	$table.append($tr1);
 	
 	data.forEach(function(val) {
 		var $tr2 = $('<tr>');
@@ -70,5 +68,9 @@ function loadTable(data) {
 	$table.append($tr2)
 	
 	});
-	$('#table').append($table);
+	$('body').append($table);
+	
 }
+
+
+

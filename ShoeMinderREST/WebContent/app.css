@@ -1,0 +1,49 @@
+body{
+	margin: 0;
+	padding:0;
+}
+
+div{
+	overflow: hidden;
+}
+
+nav {
+	width: 100%;
+	font-family: 'VT323', monospace;
+}
+
+nav h1 {
+	padding-top: 0px;
+	margin-top: 0px;
+	float: left;
+	font-family: 'VT323', monospace;
+}
+
+nav ul {
+	padding-top: 1.4em;
+	float: left;
+}
+
+nav ul li {
+	padding-left: 1em;
+	padding-right: 1em;
+	display: inline-block;
+	cursor: pointer;
+	cursor: hand;
+	tansition: all .2s ease-in-out;
+}
+nav ul li:hover {
+	transform: scale(1.1);
+}
+
+#theImg {
+	max-width: 4vw;
+	height: auto;
+	border-radius: 10px;
+}
+
+
+
+tr:nth-child(even) {
+	background-color: #eee;
+}
