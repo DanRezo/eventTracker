@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `Shoe` ;
 
 CREATE TABLE IF NOT EXISTS `Shoe` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `totalMileage` INT NULL,
+  `totalMileage` DECIMAL(4) NULL,
   `brand` VARCHAR(45) NULL,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))

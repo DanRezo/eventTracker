@@ -3,6 +3,8 @@ $(document).ready(function() {
 });
 
 var start = function() {
+	$('#div2').remove();
+	$('div').remove;
 	$('#div').remove();
 	$('#form1').remove();
 	$('#form2').remove();
@@ -82,7 +84,6 @@ function loadTable(data) {
 	});
 	
 	$('#shoes').on('click',function(e){
-		console.log('click');
 	})
 	
 }
@@ -101,6 +102,8 @@ var getShoe = function(id) {
 
 var edit = function(shoe) {
 	var $form = $('<form name="form1">');
+	var $div2 = $('<div id="div2">');
+
 	var $p = $('<p>');
 
 	var $input = $('<input>');
@@ -113,12 +116,13 @@ var edit = function(shoe) {
 	$input2.attr('type', 'submit');
 
 	$form.append($p, $input, $input2);
-	$('#div').append($form);
+	$div2.append($form);
+	$('#div').append($div2);
 
 	$input2.on('click', function(e) {
 		e.preventDefault();
 
-		var $tm = shoe.totalMileage + $input.val();
+		var $tm = parseFloat(shoe.totalMileage) + parseFloat($input.val());
 		
 		var $shoe = {
 			    totalMileage: $tm,
@@ -149,6 +153,8 @@ var edit = function(shoe) {
 var addshoe = function(){
 	
 	var $form = $('<form name="form2">');
+	var $div2 = $('<div id="div2">');
+
 	
 
 	var $input1 = $('<input>');
@@ -171,19 +177,18 @@ var addshoe = function(){
 	$input4.attr('type', 'submit');
 
 	$form.append($input1, $input2, $input3, $input4);
-	$('#div').append($form);
+	$div2.append($form);
+	$('#div').append($div2);
 	
 	$input4.on('click', function(e){
         e.preventDefault();
-		
-
+	
 		var $shoe = {
 			    totalMileage: $input3.val(),
 			    brand: $input1.val(),
 			    name: $input2.val()
 		};
 		
-		console.log($shoe);
 
 		$.ajax({
             type: "POST",
