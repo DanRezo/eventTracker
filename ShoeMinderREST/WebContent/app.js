@@ -50,7 +50,7 @@ function loadTable(data) {
 		$td4.text(val.totalMileage + ' miles');
 
 		var $button = $('<button id="'+ val.id +'">');
-		var $dbutton = $('<button id="'+ val.id +'">');
+		var $dbutton = $('<button id="del"'+ val.id +'">');
 
 		$button.attr('type', 'button');
 		$button.text('+miles');
@@ -132,7 +132,7 @@ var edit = function(shoe) {
 
 		$.ajax({
             type: "PUT",
-            url: "rest/shoe/"+ shoe.id,
+            url: "rest/shoes/"+ shoe.id,
             dataType: "json",
             contentType: 'application/json',
             data: JSON.stringify($shoe)
@@ -200,6 +200,7 @@ var addshoe = function(){
         .done(function(data, status) {
             console.log('milage update');
             start();
+            $('#div').empty();
         })
         .fail(function(xhr, status, error) {
             console.log('fail');
