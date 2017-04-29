@@ -5,7 +5,7 @@ shoeMinder is an event tracking application that allows users to track mileage o
 
 
 <p align="center">
-![alt text]WebContent/GitPic/shoeMinder.png)
+![alt text](WebContent/GitPic/shoeMinder.png)
 
 <img src="WebContent/GitPic/shoeMinder.png" alt="Minder"  width="300px" height="245px">
 </p>
