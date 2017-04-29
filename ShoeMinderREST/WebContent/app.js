@@ -8,6 +8,7 @@ var start = function() {
 	$('#div').remove();
 	$('#form1').remove();
 	$('#form2').remove();
+	$('#table').empty();
 
 	$.ajax({
 		type : "GET",
@@ -200,7 +201,7 @@ var addshoe = function(){
         .done(function(data, status) {
             console.log('milage update');
             start();
-            $('#div').empty();
+//            $('#table').empty();
         })
         .fail(function(xhr, status, error) {
             console.log('fail');
