@@ -3,6 +3,9 @@ package controllers;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,54 +29,33 @@ public class ShoeController {
 		return "pong";
 	}
 
+	// index
 	@RequestMapping(value = "shoes", method = RequestMethod.GET)
 	public List<Shoe> index() {
 		return shoeDao.index();
 	}
-	
+
+	// show
 	@RequestMapping(value = "shoes/{id}", method = RequestMethod.GET)
-	public Shoe show(@PathVariable int id) {
+	public Shoe show(HttpServletRequest req, HttpServletResponse res,@PathVariable int id) {
 		return shoeDao.show(id);
 	}
-	
+
+	// create
 	@RequestMapping(value = "shoes", method = RequestMethod.POST)
-	public Shoe create(@RequestBody String jsonShoe) {
-
-		ObjectMapper mapper = new ObjectMapper();
-		try {
-			Shoe mappedShoe = mapper.readValue(jsonShoe, Shoe.class);
-
-			return shoeDao.create(mappedShoe);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-
-			return null;
-
-		}
-
+	public Shoe create(HttpServletRequest req, HttpServletResponse res, @RequestBody String shoeJson) {
+			return shoeDao.create(shoeJson);
 	}
-	
+
+	// update
 	@RequestMapping(value = "shoes/{id}", method = RequestMethod.PUT)
-	public Shoe update(@PathVariable int id, @RequestBody String jsonShoe) {
-
-		ObjectMapper mapper = new ObjectMapper();
-
-		try {
-			Shoe mappedShoe = mapper.readValue(jsonShoe, Shoe.class);
-			return shoeDao.update(id, mappedShoe);
-		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
-		}
-
+	public Shoe update(HttpServletRequest req, HttpServletResponse res, @PathVariable int id, @RequestBody String shoeJson) {
+			return shoeDao.update(id, shoeJson);
 	}
-	
+
+	// delete
 	@RequestMapping(value = "shoes/{id}", method = RequestMethod.DELETE)
-	public Boolean destroy(@PathVariable int id) {
+	public Boolean destroy(HttpServletRequest req, HttpServletResponse res,@PathVariable int id) {
 		return shoeDao.destroy(id);
 	}
-	
-	
-	
 }

@@ -1,0 +1,33 @@
+.danger {
+	padding: 10px;
+	border: 10px solid white;
+	display: inline-block;
+	background: red;
+	border-radius: 20%;
+}
+
+.warning {
+	padding: 10px;
+	border: 10px solid white;
+	display: inline-block;
+	background: #eadf50;
+	border-radius: 20%;
+}
+
+.safe {
+	padding: 10px;
+	border: 10px solid white;
+	display: inline-block;
+	background: green;
+	border-radius: 20%;
+}
+
+.comp{
+	text-decoration: line-through red;
+}
+
+div{
+	margin-left:20px;
+	border-radius: 20%;
+}
+

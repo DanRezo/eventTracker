@@ -14,11 +14,11 @@ public interface ShoeDAO {
 	public Shoe show(@PathVariable int id);
 
 	// create
-	public Shoe create(Shoe s);
+	public Shoe create(String shoeJson);
 
 	// edit/update
-	public Shoe update(int id, Shoe q);
-	
-	//delete
-	public  Boolean destroy(int id);
+	public Shoe update(int id, String shoeJson);
+
+	// delete
+	public Boolean destroy(int id);
 }
