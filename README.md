@@ -11,11 +11,7 @@ shoeMinder is an event tracking application that allows users to track mileage o
   2. Delete
   3. +Miles
   
-  This causes the event listener to be called mulitple times on top of itseld. 
-
-
-
-
+  This causes the event listener to be called mulitple times on top of itself. 
 
 ## If More Time Were Available:
   Stretch goals for the project include:
@@ -37,12 +33,12 @@ shoeMinder is an event tracking application that allows users to track mileage o
 ## Technologies Used
 
 - Java
-_ Java Persistent API
+- Java Persistent API
 - Spring MVC and Spring STS
 - Gradle Managed Dependencies
 - MySQL and MySQL Workbench
 - HTML
-- CSs
--JavaScript
--JQuery
--Ajax
+- CSS
+- JavaScript
+- JQuery
+- Ajax
