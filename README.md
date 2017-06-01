@@ -3,10 +3,7 @@
 shoeMinder is an event tracking application that allows users to track mileage on their running shoes.shoeMinder is a full stack application utilizing Spring MVC,JPA,MySQL,HTML,CSS,JS,Jquery and Ajax.
 
 
-![alt text](WebContent/shoeMinder.png "Landing Page")
-<p align="center">
-<img src="./GitPic/shoeMinder.png" alt="Minder"  width="300px" height="245px">
-</p>
+![alt text](ShoeMinderREST/WebContent/GitPic/shoeMinder.png "Landing Page")
 
 ## Know Issues
 - Event listeners for buttons are duplicated on buttons 
