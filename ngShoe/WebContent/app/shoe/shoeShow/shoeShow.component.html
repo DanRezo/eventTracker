@@ -1,1 +1,14 @@
-<table class="table" ng-show = ""
+<div ng-hide="vm.editMode">
+	<h3>{{vm.shoe.name}}</h3>
+	<h3>{{vm.shoe.brand}}</h3>
+	<h3>{{vm.shoe.totalMileage}}</h3>
+	<button ng-click="vm.goBack()">Back</button>
+	<button ng-click="vm.setEditShoe()">add Miles</button>
+	
+</div>
+
+<form ng-show="vm.editMode">
+	<input type="text" placeholder="Miles" ng-model="vm.editShoe.totalMileage"/>
+	<input type="submit" value="Cancel" ng-click="vm.editMode=false; vm.editShoe={}" /> 
+	<input type="submit" value="Save" ng-click="vm.save()" />
+</form>

@@ -1,4 +1,4 @@
-angular.module('appModule',['todoModule','staticModule', 'ngRoute'])
+angular.module('appModule',['shoeModule','ngRoute'])
 .config(function($routeProvider){
 	$routeProvider
 	.when('/', {
@@ -10,7 +10,7 @@ angular.module('appModule',['todoModule','staticModule', 'ngRoute'])
 	.when('/contact', {
 		template: '<contact>Loading Contact...</contact>'
 	})
-	.when('/todo', {
-		template: '<todo-list>Loading todo list...</todo-list>'
+	.when('/shoes', {
+		template: '<shoe-list>Loading your shoes...</shoe-list>'
 	})
 });

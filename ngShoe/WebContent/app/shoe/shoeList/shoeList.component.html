@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">shoeMinder</a>
+		</div>
+	</div>
+</nav>
+
+
+<table class="table" ng-show="vm.showTable">
+	<tr>
+		<th>Brand</th>
+		<th>Name</th>
+		<th>Total Distance</th>
+		<th>Condition</th>
+	</tr>
+	<tr ng-repeat="s in vm.shoes">
+		<td>{{s.brand}}</td>
+		<td>{{s.name}}</td>
+		<td>{{s.totalMileage}}</td>
+		<td>Replace</td>
+		<td><button ng-click="vm.displayShoe(s)">Info</button>
+		<td><button ng-click="vm.deleteShoe(s.id)">Retire</button>
+	</tr>
+</table>
+
+<form class="form" ng-show="vm.showTable">
+	<input type="text" placeholder="Brand" ng-model="addShoe.brand" /><br/>
+	<input type="text" placeholder="Name" ng-model="addShoe.name" /><br/>
+	<input type="text" placeholder="Mileage" ng-model="addShoe.totalMileage"/><br/>
+	<input type="submit" value="New Shoe"
+		ng-click="vm.click(addShoe); addShoe={}" />
+</form>
+
+<shoe-show shoe="vm.selected" ng-shoe="vm.selected" go-back="vm.displayTable()" on-update="vm.updateShoe(shoe)"></shoe-show>

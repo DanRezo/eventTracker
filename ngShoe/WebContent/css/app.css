@@ -22,12 +22,28 @@
 	border-radius: 20%;
 }
 
-.comp{
-	text-decoration: line-through red;
-}
-
 div{
 	margin-left:20px;
-	border-radius: 20%;
+		overflow: hidden;
+	
 }
+ body {
+	margin: 0;
+	padding: 0;
+}
+
+
+nav {
+	width: 100%;
+	font-family: 'VT323', monospace;
+}
+
+nav ul li:hover {
+	transform: scale(1.1);
+}
+
+tr:nth-child(even) {
+	background-color: #eee;
+}
+
 

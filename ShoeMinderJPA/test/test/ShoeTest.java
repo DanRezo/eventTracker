@@ -30,13 +30,6 @@ public class ShoeTest {
 		em.close();
 		emf.close();
 	}
-
-//	@Test
-//	public void test() {
-//		boolean pass = true;
-//		assertEquals(pass, true);
-//	}
-
 	
 	@Test
 	public void testShoeBrand() {
@@ -48,9 +41,10 @@ public class ShoeTest {
 		assertEquals(s.getName(), "Pegasus 34");
 	}
 
+	
 	@Test
 	public void testTotalMileage(){
-		assertEquals(s.getTotalMileage(), 56);
+		assertEquals (s.getTotalMileage(), 56.0);
 	}
 	
 }

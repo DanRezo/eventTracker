@@ -57,13 +57,7 @@ public class ShoeDAOImpl implements ShoeDAO {
 			return null;
 		}
 	}
-	//
-	// Shoe shoe = em.find(Shoe.class, id);
-	// shoe.setTotalMileage(s.getTotalMileage());
-	//
-	// return shoe;
-	// }
-
+	
 	@Override
 	public Boolean destroy(int id) {
 
